@@ -12,6 +12,9 @@ body{
 	border-radius: 200px;
 	cursor:pointer;
 	display: inline-block;
+	color:white;
+	text-align: center;
+	
 
 }
 #red{

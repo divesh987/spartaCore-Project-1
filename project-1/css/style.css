@@ -1,0 +1,32 @@
+body{
+	background-color: black;
+
+}
+
+/*styling circles*/
+
+.circle{
+	height: 200px;
+	width: 200px;
+	border: 2px solid white;
+	border-radius: 200px;
+	cursor:pointer;
+	display: inline-block;
+
+}
+#red{
+		background-color: #F08080;
+
+}
+#green {
+	background-color: #90EE90;
+}
+
+#yellow {
+	background-color: #FFFFE0;
+
+}
+#blue {
+	background-color: #ADD8E6;
+
+} 

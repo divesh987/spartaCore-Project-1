@@ -9,6 +9,8 @@ $(function(event){
 	var $blue = $("#blue");
 	var $test=$("#button");
 	var timed = 2000;
+	var currentColour;
+	var reset;
 	// console.log($circle);
 	var $start=$("#start");
 	var num;
@@ -30,7 +32,12 @@ $(function(event){
 function sequence(){
 	for (var i=1;i<6;i++){
 	setTimeout(myTimeout1,(i*2000));
+setTimeout(resetColour,i*3000)
+
+	// setTimeout(resetColour(currentColour,i*3000))
 }
+
+
 
 }
 
@@ -40,35 +47,44 @@ $start.on("click",function(){
 })
 
 $test.on("click",function(){
+	// currentColour=$colours[0];
+	
 	
 })	
 //function that will randomise the sequence
 function myTimeout1() {
 	num=(Math.round(Math.random()*3) + 1)-1
 	console.log(num);
-	var x =$colours[num];
-	console.log(x);
-   x.css("background-color",colours[num]);
-   console.log("2 secs passed");
+	currentColour =$colours[num];
+	console.log(currentColour);
+  	currentColour.css("background-color",colours[num]);
+  	console.log("2 secs passed");
+   // setInterval(resetColour(x), 2000);
 }
+// var a = settingResetcolours($("#red"));
+// 	console.log(a);
 console.log($colours[0]);
-
-function resetColour(a,colour){
-	a.css("background-color",)
+function resetColour(){
+	console.log("resseted")
+ reset=settingResetcolours(currentColour);
+currentColour.css("background-color",settingResetcolours(currentColour));
 
 }
-function settingResetcolours(currentColour,resetColour){
-	switch(currentColour.attr("id")){
+function settingResetcolours(solidColour){
+	var resetColour;
+	switch(solidColour.attr("id")){
 		case "red":
-		resetColour="#F08080";
+		return resetColour="#F08080";
 		break;
 		case "green":
-		resetColour="#90EE90";
+		return resetColour="#90EE90";
 		break;
 		case "yellow":
-		resetColour="#FFFFE0";
+		return resetColour="#FFFFE0";
 		break;
-		resetColour="#ADD8E6"
+		case "blue":
+		return resetColour="#ADD8E6";
+		break;
 
 	}
 }

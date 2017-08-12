@@ -8,9 +8,13 @@ $(function(event){
 	var $yellow = $("#yellow");
 	var $blue = $("#blue");
 	var $test=$("#button");
-	var timed = 2000;
+	var timed = 3000;
 	var currentColour;
 	var reset;
+	var seq=[];
+	var playerSeq=[];
+	var seqCheck=[];
+	var resultDisplay=$("#result");
 	// console.log($circle);
 	var $start=$("#start");
 	var num;
@@ -20,30 +24,38 @@ $(function(event){
 	console.log($colours[0]);
 	var colours=["red","green","yellow","blue"]
 //loop through function to set all circles 
+function buttonclickable(){
 	for(var i=0;i<$colours.length;i++){
 		setUpCircles($colours[i],colours[i]);
+}
 }
 //set up circles function 
 	function setUpCircles(x,colour){
 		x.on("click",function(){
 		x.css("background-color",colour)
+		setTimeout(function(){
+		x.css("background-color",settingResetcolours(x));
+		},1000);
+		playerSeq.push(colour);
+		console.log(playerSeq);
+		compareSeq(seq,playerSeq);
+
 	})
  	}
 function sequence(){
 	for (var i=1;i<6;i++){
-	setTimeout(myTimeout1,(i*2000));
-setTimeout(resetColour,i*3000)
-
+		var j=2000*i;
+		setTimeout(myTimeout1,j);
+		setTimeout(resetColour,j+1000);
 	// setTimeout(resetColour(currentColour,i*3000))
 }
-
-
+buttonclickable();
 
 }
 
 $start.on("click",function(){
 	sequence();
-	console.log("hello")
+
 })
 
 $test.on("click",function(){
@@ -53,12 +65,16 @@ $test.on("click",function(){
 })	
 //function that will randomise the sequence
 function myTimeout1() {
+	var currentColourID=0;
 	num=(Math.round(Math.random()*3) + 1)-1
 	console.log(num);
 	currentColour =$colours[num];
+	currentColourID=currentColour.attr("id");
 	console.log(currentColour);
   	currentColour.css("background-color",colours[num]);
   	console.log("2 secs passed");
+  	seq.push(currentColourID);
+  	console.log(seq);
    // setInterval(resetColour(x), 2000);
 }
 // var a = settingResetcolours($("#red"));
@@ -88,5 +104,33 @@ function settingResetcolours(solidColour){
 
 	}
 }
+
+function compareSeq(sequence,playerSequence){
+	for(var i =0; i<playerSequence.length;i++){
+
+			if(playerSequence[i]==sequence[i]){
+				console.log("correct");
+				seqCheck.push("correct");
+				resultDisplay.html("correct");
+		} else {
+			console.log("incorrect");
+			seqCheck.push("incorrect");
+			resultDisplay.html("incorrect");
+			break;
+		}
+	}
+}
+
+function resultCheck(){
+	for (var i=0;i<seqCheck;i++){
+		if(seqCheck[i]=="correct"){
+			resultDisplay.html("correct");
+
+		} else {
+			resultDisplay.html("incorrect");
+		}
+	}
+}
+
 
  })

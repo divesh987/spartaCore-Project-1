@@ -8,6 +8,7 @@ $(function(event){
 	var $blue = $("#blue");
 	var $test=$("#button");
 	var timed = 3000;
+	$playAgain=$("#pg");
 	var currentColour;
 	var reset;
 	var seq=[];
@@ -22,10 +23,10 @@ $(function(event){
 	var $colours = [$red,$green,$yellow,$blue]
 	var colours=["red","green","yellow","blue"]
 //loop through function to set all circles 
-function buttonclickable(){
-	for(var i=0;i<$colours.length;i++){
-		setUpCircles($colours[i],colours[i]);
-}
+	function buttonclickable(){
+		for(var i=0;i<$colours.length;i++){
+			setUpCircles($colours[i],colours[i]);
+		}
 }
 //set up circles function 
 	function setUpCircles(x,colour){
@@ -36,19 +37,16 @@ function buttonclickable(){
 		},1000);
 		playerSeq.push(colour);
 		compareSeq(seq,playerSeq);
-
-	}))
+		}))
  	}
 function sequence(){
 	for (var i=1;i<6;i++){
 		var j=2000*i;
 		setTimeout(myTimeout1,j);
 		setTimeout(resetColour,j+1000);
-
-	// setTimeout(resetColour(currentColour,i*3000))
-}
-buttonclickable();
-
+		// setTimeout(resetColour(currentColour,i*3000))
+	}
+	buttonclickable();
 }
 
 $start.on("click",function(){
@@ -89,25 +87,25 @@ function settingResetcolours(solidColour){
 }
 function compareSeq(sequence,playerSequence){
 	for(var i =0; i<playerSequence.length;i++){
-
 			if(playerSequence[i]==sequence[i]){
 				seqCheck.push("correct");
 				// resultDisplay.html("correct");
 				score++;
 				$score.html(score)
-		} else {
+			} else {
 			seqCheck.push("incorrect");
 			resultDisplay.html("Game Over, Your score is: "+score);
 			turnOffButtons();
 			break;
-		}
+			}
 	}
-	seq=[];
-	playerSequence=[];
 }
+$playAgain.on("click",function(){
+	location.reload();
+})
 function turnOffButtons(){
-				for(var i=0;i<$colours.length;i++){
-				$colours[i].off("click");
+	for(var i=0;i<$colours.length;i++){
+		$colours[i].off("click");
+	}
 }
-}
- })
+})

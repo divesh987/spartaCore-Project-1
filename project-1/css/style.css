@@ -17,12 +17,21 @@ h1{
 	display: inline-block;
 
 }
+.light {
+	height: 75px;
+	width: 75px;
+	background-color:#A0A0A0;
+	border-radius: 75px;
+}
 #red{
 		background-color: #F08080;
 
 }
 #green {
 	background-color: #90EE90;
+}
+#go{
+	color: white;
 }
 
 #yellow {
@@ -35,7 +44,7 @@ h1{
 } 
 #result{
 	height: 100px;
-	width: 100px;
+	width: 120px;
 	border: 2px solid white;
 	color: white;
 }

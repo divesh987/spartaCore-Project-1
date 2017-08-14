@@ -17,6 +17,7 @@ $(function(event){
 	var resultDisplay=$("#result");
 	var $score=$("#score");
 	var score=0;
+	var play= true;
 	// console.log($circle);
 	var $start=$("#start");
 	var num;
@@ -45,6 +46,9 @@ function buttonclickable(){
 	}))
  	}
 function sequence(){
+	// while(play){
+
+	// }
 	for (var i=1;i<6;i++){
 		var j=2000*i;
 		setTimeout(myTimeout1,j);
@@ -111,11 +115,12 @@ function compareSeq(sequence,playerSequence){
 		} else {
 			console.log("incorrect");
 			seqCheck.push("incorrect");
-			resultDisplay.html("incorrect");
+			resultDisplay.html("Game Over, Your score is: "+score);
 			turnOffButtons();
 			break;
 		}
 	}
+	playerSequence=[];
 }
 function turnOffButtons(){
 	console.log("turning off buttons");
@@ -123,6 +128,4 @@ function turnOffButtons(){
 				$colours[i].off("click");
 }
 }
-
-
  })

@@ -19,7 +19,11 @@ $(function(event){
 	var $score=$("#score");
 	var score=0;
 	var play = true;
-	var audio = new Audio('audio/pianoD.mp3');
+	var audioA = new Audio('audio/pianoA.mp3');
+	var audioB = new Audio('audio/pianoB.mp3');
+	var audioC = new Audio('audio/pianoC.mp3');
+	var audioD = new Audio('audio/pianoD.mp3');
+	var audios=[audioA,audioB,audioC,audioD];
 	// console.log($circle);
 	var $start=$("#start");
 	var num;
@@ -32,13 +36,13 @@ $(function(event){
 	//loop through function to set all circles 
 	function buttonclickable(){
 		for(var i=0;i<$colours.length;i++){
-			setUpCircles($colours[i],colours[i]);
+			setUpCircles($colours[i],colours[i],audios[i]);
 		}
 			$go.html("Go!");
 	}
 
 	//set up circles function 
-	function setUpCircles(x,colour){
+	function setUpCircles(x,colour,audio){
 		console.log('setting up circles function')
 
 		$(x.on("click",function(){
@@ -47,6 +51,7 @@ $(function(event){
 		// 	playerSeq = [];
 		// }
 		x.css("background-color",colour)
+		audio.play();
 		setTimeout(function(){
 		x.css("background-color",settingResetcolours(x));
 		},1000);
@@ -86,6 +91,7 @@ function myTimeout1() {
 	num=(Math.round(Math.random()*3) + 1)-1
 	// console.log(num);
 	currentColour =$colours[num];
+	audios[num].play()
 	 currentColourID=currentColour.attr("id");
 	// console.log(currentColour);
   	currentColour.css("background-color",colours[num]);

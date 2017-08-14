@@ -2,14 +2,45 @@
 <html>
 <head>
 	<title>Sparta Core Project 1</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="js/main.js" async></script> 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js" async></script> 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
-
-
-
-
+<body>	
+	<div id="gameCanvas">
+		<h1>Memory Test Game</h1>
+		<!-- circles creation -->
+		<div class="container" id="cont">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="circle" id="red"></div>
+				</div>
+				<div class="col-md-3">
+					<div class="circle" id="green"></div>
+				</div>
+				<div class="col-md-3">
+					<div class="circle" id="yellow"></div>
+				</div>
+				<div class="col-md-3">
+					<div class="circle" id="blue"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container" >
+			<div class="row">
+				<div class="displayResult">
+					<div class="col-md-6">
+						<div id="start">
+							<br>Start
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div id="result">Score: <span id="score"></span></div>
+						<button id="pg">Play Again</button>
+					</div>
+				</div>
+			</div>
+		</div>
 </body>
 </html>

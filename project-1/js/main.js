@@ -15,6 +15,8 @@ $(function(event){
 	var playerSeq=[];
 	var seqCheck=[];
 	var resultDisplay=$("#result");
+	var $score=$("#score");
+	var score=0;
 	// console.log($circle);
 	var $start=$("#start");
 	var num;
@@ -31,7 +33,7 @@ function buttonclickable(){
 }
 //set up circles function 
 	function setUpCircles(x,colour){
-		x.on("click",function(){
+		$(x.on("click",function(){
 		x.css("background-color",colour)
 		setTimeout(function(){
 		x.css("background-color",settingResetcolours(x));
@@ -40,13 +42,14 @@ function buttonclickable(){
 		console.log(playerSeq);
 		compareSeq(seq,playerSeq);
 
-	})
+	}))
  	}
 function sequence(){
 	for (var i=1;i<6;i++){
 		var j=2000*i;
 		setTimeout(myTimeout1,j);
 		setTimeout(resetColour,j+1000);
+
 	// setTimeout(resetColour(currentColour,i*3000))
 }
 buttonclickable();
@@ -56,12 +59,6 @@ buttonclickable();
 $start.on("click",function(){
 	sequence();
 
-})
-
-$test.on("click",function(){
-	// currentColour=$colours[0];
-	
-	
 })	
 //function that will randomise the sequence
 function myTimeout1() {
@@ -82,9 +79,8 @@ function myTimeout1() {
 console.log($colours[0]);
 function resetColour(){
 	console.log("resseted")
- reset=settingResetcolours(currentColour);
-currentColour.css("background-color",settingResetcolours(currentColour));
-
+ 	reset=settingResetcolours(currentColour);
+	currentColour.css("background-color",settingResetcolours(currentColour));
 }
 function settingResetcolours(solidColour){
 	var resetColour;
@@ -101,35 +97,31 @@ function settingResetcolours(solidColour){
 		case "blue":
 		return resetColour="#ADD8E6";
 		break;
-
 	}
 }
-
 function compareSeq(sequence,playerSequence){
 	for(var i =0; i<playerSequence.length;i++){
 
 			if(playerSequence[i]==sequence[i]){
 				console.log("correct");
 				seqCheck.push("correct");
-				resultDisplay.html("correct");
+				// resultDisplay.html("correct");
+				score++;
+				$score.html(score)
 		} else {
 			console.log("incorrect");
 			seqCheck.push("incorrect");
 			resultDisplay.html("incorrect");
+			turnOffButtons();
 			break;
 		}
 	}
 }
-
-function resultCheck(){
-	for (var i=0;i<seqCheck;i++){
-		if(seqCheck[i]=="correct"){
-			resultDisplay.html("correct");
-
-		} else {
-			resultDisplay.html("incorrect");
-		}
-	}
+function turnOffButtons(){
+	console.log("turning off buttons");
+				for(var i=0;i<$colours.length;i++){
+				$colours[i].off("click");
+}
 }
 
 

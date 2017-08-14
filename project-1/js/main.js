@@ -19,7 +19,7 @@ $(function(event){
 	var $score=$("#score");
 	var score=0;
 	var play = true;
-	var audio = new Audio('audio/pianoD.wav');
+	var audio = new Audio('audio/pianoD.mp3');
 	// console.log($circle);
 	var $start=$("#start");
 	var num;
@@ -34,7 +34,7 @@ $(function(event){
 		for(var i=0;i<$colours.length;i++){
 			setUpCircles($colours[i],colours[i]);
 		}
-			$go.html("Go!")
+			$go.html("Go!");
 	}
 
 	//set up circles function 
@@ -101,7 +101,7 @@ function myTimeout1() {
 function resetColour(){
 	// console.log("resseted")
  	reset=settingResetcolours(currentColour);
-	currentColour.css("background-color",settingResetcolours(currentColour));
+	currentColour.css("background-color",reset);
 }
 
 function settingResetcolours(solidColour){

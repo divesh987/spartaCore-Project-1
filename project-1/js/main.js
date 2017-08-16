@@ -65,17 +65,17 @@ $(function(event){
 		}	
 	}
 
-
-$start.on("click",function(){
-	turnOffButtons();
-	$go.html("")
- 	end++;
-	playerSeq=[];
-	seq=[];
-	sequence();
-	setTimeout(buttonclickable,end*2000);
-})	
-
+	function startGame(){
+		$start.on("click",function(){
+			turnOffButtons();
+			$go.html("")
+ 			end++;
+			playerSeq=[];
+			seq=[];
+			sequence();
+			setTimeout(buttonclickable,end*2000);
+		})
+	}
 
 //function that will randomise the sequence
 function myTimeout1() {
@@ -134,4 +134,7 @@ function turnOffButtons(){
 		$colours[i].off("click");
 	}
 }
+
+startGame();	
+
 })

@@ -81,9 +81,9 @@ The game was created on a webpage so it can be run on web browsers such as Googl
 * If the player repeats the sequence incorrectly, they will lose to the other player.
 
 ## Game Screenshots
-![Screenshot 1](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
-![Screenshot 2](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
-![Screenshot 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
-![Screenshot 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
-![Screenshot 5](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
+![Screenshot 1](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/gameScreenshots/Screenshot1.png " ")
+![Screenshot 2](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/gameScreenshots/Screenshot2.png " ")
+![Screenshot 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/gameScreenshots/Screenshot3.png " ")
+![Screenshot 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/gameScreenshots/Screenshot4.png" ")
+![Screenshot 5](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/gameScreenshots/Screenshot5.png " ")
 

@@ -12,7 +12,7 @@ $(function(event){
 	var reset;
 	var $pg=$("#pg");
 	var p1end =0;
-	var p2end=0;
+	var p2end=0	;
 	var requiredSequenceP1=[];
 	var requiredSequenceP2=[];
 	var sequenceP1=[];
@@ -23,10 +23,6 @@ $(function(event){
 	var $score2=$("#score2");
 	var score1=0;
 	var score2=0;
-	var $p1Lives=$(".lives");
-	var $p2Lives=$(".lives2");
-	var p1Lives=3;
-	var p2Lives=3;
 	var play = true;
 	var audioA = new Audio('audio/pianoA.mp3');
 	var audioB = new Audio('audio/pianoB.mp3');
@@ -34,7 +30,6 @@ $(function(event){
 	var audioD = new Audio('audio/pianoD.mp3');
 	var audios=[audioA,audioB,audioC,audioD];
 	var turn = 0;
-	var $start=$("#start");
 	var num;
 	
 	//putting all found colours into array to set circles up
@@ -59,12 +54,7 @@ $(function(event){
 			setUpKeys($arrows[i],arrows[i],audios[i],sq)
 		
 		}
-
-		if(turn % 2 !=0){
-			$go.html("Kudos Go!");
-		} else {
-			$go.html("Slasher Go!")
-		}
+		switchTurns();
 
 	}
 
@@ -134,6 +124,7 @@ $(function(event){
 	function start(){
 		$("body").keydown(function(e) {
 	  	if(e.keyCode == 32) { 
+	  		$("#instructions").css("display","none");
 	  		$start.html("Tap Space to Submit Sequence!")
 	  		gameStart();
 				compareSeq();
@@ -147,19 +138,28 @@ $(function(event){
 		for(var i=0;i<$colours.length;i++){
 			setUpCircles($colours[i],colours[i],audios[i],sq);
 		}
-
-		if(turn % 2 !=0){
-			$go.html("Kudos Go!");
-		} else {
-			$go.html("Slasher Go!")
-		}
+		switchTurns();
 	
+	}
+	function switchTurns(){
+			if(turn % 2 !=0){
+			$go.html("Kudos Go!");
+			$go.css("left","20px");
+			
+		} else {
+			$go.html("Slasher Go!");
+			$go.css("left","600px");
+			$go.css("colour","blue");
+			// $("#gameCanvas").css("background-color","#888B81");
+			// $("#slasher").css("display","")
+			// $("#kudos").css("display","none");
+		}
+
 	}
 
 	$pg.click(function(){
-		console.log("pg");
-			// location.reload();
-			clearInterval(keepComp);
+
+		document.location.replace("index.html")
 	})
 
 	function gameStart(){
@@ -169,6 +169,9 @@ $(function(event){
 			// for (var i = 0; i < $circles.length; i++){
 			// 	$circles[i].css("background-color",settingResetcolours($circles[i]));
 			// }
+			$("#gameCanvas").css("background-color","black");
+			$("#kudos").css("display","");
+			$("#slasher").css("display","none")
 			sequenceP1=[];
 			requiredSequenceP1=[];
 			turnOffButtons();
@@ -187,6 +190,9 @@ $(function(event){
 
 		}
 		else {
+				$("#gameCanvas").css("background-color","#888B81");
+			$("#slasher").css("display","")
+			$("#kudos").css("display","none");
 			removeCircles();
 			turnOffButtons();
 			sequenceP2=[];
@@ -393,8 +399,13 @@ $(function(event){
 						 
 						 // setTimeout(gameStart,1000);
 					}else {
-						window.location.replace("gameOver.html")
-						$result1.html("Game Over, Your score is: "+score1 + " Slasher wins");
+						$("#gameCanvas").css("display","none");
+						// $("#gameOver").css("display","unset")
+						$("#gO").html("GAME OVER!!!")
+						$("#winner").html("Slasher------------------------------------" + score2);
+						$("#loser").html("Kudos---------------------------------------" + score1);
+						$("#endResult").html("Player 2 Wins!!! \nSlasher kills Kudos. He avenges his parents. Will he ever find out he is a demi-god?")
+						
 						turnOffButtons();
 						$("body").keydown(function(e) {
 	  					if(e.keyCode == 32) { 
@@ -430,8 +441,13 @@ $(function(event){
 						 
 
 					} else {
-
+						$("#gO").html("GAME OVER!!!")
+						$("#gameCanvas").css("display","none");
+						// $("#gameOver").css("display",);
 						$result2.html("Game Over, Your score is: "+score2 + " Kudos wins");
+						$("#winner").html("Kudos------------------------------------" + score1);
+						$("#loser").html("Slasher-----------------------------------" + score2);
+						$("#endResult").html("Slasher failed to avenge his parents. Kudos kills Slasher and his tyranny continues...")
 						turnOffButtons();
 						$("body").keydown(function(e) {
 	  					if(e.keyCode == 32) { 

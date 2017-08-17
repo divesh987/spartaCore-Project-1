@@ -5,16 +5,33 @@ h1{
 	color: white;
 	text-align: center;
 }
+#kudoslife {
+	float: left;
+}
+#slasherlife{
+	float: right;
+	position: relative;
+	right: 160px;
+}
 /*styling circles*/
 
 .circle{
-	height: 150px;
-	width: 150px;
-	border: 2px solid white;
-	border-radius: 150px;
+	height: 120px;
+	width: 120px;
+	border: 2px solid #888B81;
+	border-radius: 120px;
 	cursor:pointer;
 	display: inline-block;
 
+}
+.lives {
+	height: 30px;
+	width: 30px;
+}
+.lives1{
+	height: 30px;
+	width: 30px;
+	float: right;
 }
 .light {
 	height: 75px;
@@ -31,6 +48,8 @@ h1{
 }
 #go{
 	color: white;
+	position: relative;
+	left: 100px;
 }
 
 #yellow {
@@ -41,14 +60,47 @@ h1{
 	background-color: #ADD8E6;
 
 } 
-#result{
+#result1{
 	height: 100px;
 	width: 120px;
-	border: 2px solid white;
 	color: white;
 }
+#result2{
+	height: 100px;
+	width: 120px;
+	color: white;
+}
+#slasher{
+	float: right;
+}
+#kudos{
+	float: left;
+	height: 256px;
+	width: 256px;
+}
+#title{
+	width: 70px;
+	position: relative;
+	left: 450px;
+	top: 220px;
+	
+}
+#up {
+    /*opacity: 0.4;
+    filter: alpha(opacity=40);*/ /* msie */
+}
+#down {
 
-#start{
+}
+#left {
+
+}
+#right {
+
+}
+
+
+/*#start{
 	margin-left: 100px;
 	color: white;
 	border: 2px solid white;
@@ -59,19 +111,21 @@ h1{
 	background-color: red;
 	font-size: 20px;
 	
-}
+}*/
 #gameCanvas{
-/*	margin: 0 10%;*/
+	margin: 0 12%;*/
 	height: 590px;
 	width: 1050px;
 	border: 2px solid white;
-	margin-top: 20px;
-	background-image: url("../images/bg.jpg");
+	margin-top: 50px;
+/*	background-image: url("../images/bg.jpg");*/
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-color: #888B81;
+	border-radius: 20px;
 }
 #cont{
-	margin-top: 150px;
+	margin-top: 290px;
 }
 #resultDisplay{
 	background-color: red;

@@ -9,38 +9,65 @@
 </head>
 <body>	
 	<div id="gameCanvas">
-		<h1>Memory Test Game</h1>
+		<h4 id="kudoslife">Kudos:</h4>
+		<img class="lives" src="images/lives.png">
+		<img class="lives" src="images/lives.png">
+		<img class="lives" src="images/lives.png">
+
+		<h4 id="slasherlife">Slasher:</h4>
+		<img class="lives1" src="images/lives.png">
+		<img class="lives1" src="images/lives.png">
+		<img class="lives1" src="images/lives.png">
+
+		<h1 id="title">Kudos VS Slasher</h1>
+		<img src="images/kudos.png" id="kudos">
+
+		<img src="images/slasher2.gif" id="slasher">
+
+
 		<!-- circles creation -->
 		<h3 id="go"></h3>
 		<div class="container" id="cont">
 			<div class="row">
 				<div class="col-md-3">
 					<div class="circle" id="red"></div>
+					<img id="up" src="images/uparrow.png" />
 				</div>
 				<div class="col-md-3">
 					<div class="circle" id="green"></div>
+					<img id="down" src="images/downarrow.png">
 				</div>
 				<div class="col-md-3">
 					<div class="circle" id="yellow"></div>
+					<img id="left" src="images/leftarrow.png">
 				</div>
 				<div class="col-md-3">
 					<div class="circle" id="blue"></div>
+					<img id="right" src="images/rightarrow.png">
 				</div>
 			</div>
 		</div>
-		<div class="container" >
-			<div class="row">
-				<div class="displayResult">
-					<div class="col-md-6">
-						<button id="start">
-							<br>Start
-						</button>
-					</div>
-					<div class="col-md-6">
-						<div id="result">Score: <span id="score"></span></div>
-						<button id="pg">Play Again</button>
-					</div>
+    		
+    		
+    		
+    		
+
+		<div class="row">
+			<div class="displayResult">
+				<div class="col-md-4">
+					<button id="start">
+						Start
+					</button>
+					<button id="pg">Play Again</button>
 				</div>
+				<div class="col-md-4">
+					<div id="result1">Kudos Score: <span id="score1"></span></div>
+				</div>
+				<div class="col-md-4">
+					<div id="result2">Slasher Score: <span id="score2"></span></div>
+				</div>
+					<!-- <button id="pg">Play Again</button> -->
+				
 			</div>
 		</div>
 	<!-- 	<div class="resultDisplay"></div> -->

@@ -40,13 +40,13 @@ The technologies used for the creation of my game are HTML, CSS, Bootstrap, Java
 ![Wireframe 1](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame1.png " ")
 
 ### Wireframe 2 - Player 1's Turn
-![Wireframe 2](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame2.png " ")
+![Wireframe 2](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/Wireframe2.png " ")
 
 ### WireFrame 3 - Player 2's Turn 
-![Wireframe 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame3.png " ")
+![Wireframe 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/Wireframe3.png " ")
 
 ### WireFrame 4 - Game Over Screen
-![Wireframe 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame4.png " ")
+![Wireframe 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/Wireframe4.png " ")
 
 ## How I approached the task
 For the task given, I decided to first decide upon the game that I am going to develop. This process involved browsing the internet to look at other games for inspiration and ideas. Upon coming up with my idea I started to plan out how I am going to implement it. I had to design the wireframes for all the different displays that could possibly show up on the game screen. 

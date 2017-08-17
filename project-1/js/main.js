@@ -366,8 +366,8 @@ $(function(event){
 
 						$("#gameCanvas").css("display","none");
 						$("#gO").html("GAME OVER!!!")
-						$("#winner").html("Slasher------------------------------------" + score2);
-						$("#loser").html("Kudos---------------------------------------" + score1);
+						$("#winner").html("Slasher------------------------------------" + score2 + " sequences repateated correctly");
+						$("#loser").html("Kudos---------------------------------------" + score1 + " sequences repateated correctly");
 						$("#endResult").html("Player 2 Wins!!! \n Slasher kills Kudos. He avenges his parents. Will he ever find out he is a demi-god?");
 						turnOffButtons();
 						clearInterval(keepComp);
@@ -393,8 +393,8 @@ $(function(event){
 						$("#gO").html("GAME OVER!!!")
 						$("#gameCanvas").css("display","none");
 						// $("#gameOver").css("display",);
-						$("#winner").html("Kudos------------------------------------" + score1);
-						$("#loser").html("Slasher-----------------------------------" + score2);
+						$("#winner").html("Kudos------------------------------------" + score1 + " sequences repateated correctly");
+						$("#loser").html("Slasher-----------------------------------" + score2 + " sequences repateated correctly");
 						$("#endResult").html("Player 1 wins!!! \n Slasher failed to avenge his parents. Kudos kills Slasher and his tyranny continues...")
 						turnOffButtons();
 						$start.off("click");

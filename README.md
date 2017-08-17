@@ -71,13 +71,13 @@ I am pleased with the fact that my programming skills are getting better and tha
 
 # Game
 ## How to run the software
-The game was created on a webpage so it can be run on web browsers such as Google Chrome, Internet Explorer, etc. The game was not intended for mobile because of controls such as arrow keys. The game is best run on desktop and laptop computers.
+The game was created on a webpage so it can be run on web browsers such as Google Chrome, Internet Explorer, etc. The game was not intended for mobile because of controls such as arrow keys. The game is best run on desktop and laptop computers. 
 
 ## Rules
 * Game starts with player 1's turn.
 * Player 1 will be shown a sequence of colours lighting up
 * Player 2 wil be shown a sequence of arrow keys pressing
-* Each player must repeat the sequence shown correctly.
+* Each player must repeat the sequence shown correctly. 
 * If the player repeats the sequence incorrectly, they will lose to the other player.
 
 ## Game Screenshots
@@ -86,3 +86,4 @@ The game was created on a webpage so it can be run on web browsers such as Googl
 ![Screenshot 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
 ![Screenshot 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
 ![Screenshot 5](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
+

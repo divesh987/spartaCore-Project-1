@@ -378,11 +378,6 @@ $(function(event){
 						$("#loser").html("Kudos---------------------------------------" + score1);
 						$("#endResult").html("Player 2 Wins!!! \n Slasher kills Kudos. He avenges his parents. Will he ever find out he is a demi-god?");
 						turnOffButtons();
-						$("body").off(function(e) {
-	  					if(e.keyCode == 32) { 
-
-	  					}
-						})
 						clearInterval(keepComp);
 						$start.off("click");
 						$($start.remove())

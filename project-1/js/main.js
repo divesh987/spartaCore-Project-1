@@ -134,6 +134,7 @@ $(function(event){
 	function start(){
 		$("body").keydown(function(e) {
 	  	if(e.keyCode == 32) { 
+	  		$start.html("Tap Space to Submit Sequence!")
 	  		gameStart();
 				compareSeq();
 
@@ -192,12 +193,11 @@ $(function(event){
 			requiredSequenceP2=[];
 			$go.html("")
  			 p2end++;
- 			 setTimeout(function(){
+
  			 	keySequence(p2end,requiredSequenceP2);
- 			 },500);
  			 setTimeout(function(){
  			 		keyspressable(sequenceP2);
- 			 },p2end*1000);
+ 			 },(p2end*1000)+500);
  			 turn++
 			// sequence(p2end,requiredSequenceP2);
 			// setTimeout(function(){
@@ -393,7 +393,7 @@ $(function(event){
 						 
 						 // setTimeout(gameStart,1000);
 					}else {
-
+						window.location.replace("gameOver.html")
 						$result1.html("Game Over, Your score is: "+score1 + " Slasher wins");
 						turnOffButtons();
 						$("body").keydown(function(e) {

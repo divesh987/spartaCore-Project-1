@@ -51,7 +51,10 @@ h1{
 #go{
 	color: white;
 	position: relative;
-	left: 100px;
+	left: 20px;
+	height: 50px;
+	width: 50px;
+	float: left;
 }
 
 #yellow {
@@ -87,33 +90,14 @@ h1{
 	top: 220px;
 	
 }
-#up {
-    /*opacity: 0.4;
-    filter: alpha(opacity=40);*/ /* msie */
-}
-#down {
 
-}
-#left {
-
-}
-#right {
-
-}
-
-
-/*#start{
-	margin-left: 100px;
+#gO{
 	color: white;
-	border: 2px solid white;
-	height: 100px;
-	width: 100px;
-	text-align: center;
-	cursor:pointer;
-	background-color: red;
-	font-size: 20px;
-	
-}*/
+}
+ol{
+	color: white;
+	font-size: 30px;
+}
 #gameCanvas{
 	margin: 0 12%;*/
 	height: 590px;
@@ -123,6 +107,16 @@ h1{
 /*	background-image: url("../images/bg.jpg");*/
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-color: #888B81;
+	border-radius: 20px;
+}
+#gameOver{
+		margin: 0 12%;*/
+	height: 590px;
+	width: 1050px;
+	border: 2px solid white;
+	margin-top: 50px;
+/*	background-image: url("../images/bg.jpg");*/
 	background-color: #888B81;
 	border-radius: 20px;
 }

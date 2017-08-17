@@ -5,79 +5,129 @@ h1{
 	color: white;
 	text-align: center;
 }
+#kudoslife {
+	float: left;
+}
+#slasherlife{
+	float: right;
+	position: relative;
+	right: 160px;
+}
+
 /*styling circles*/
 
 .circle{
-	height: 150px;
-	width: 150px;
-	border: 2px solid white;
-	border-radius: 150px;
+	height: 120px;
+	width: 120px;
+	border: 2px solid #888B81;
+	border-radius: 120px;
 	cursor:pointer;
 	display: inline-block;
+}
 
-}
-.light {
-	height: 75px;
-	width: 75px;
-	background-color:#A0A0A0;
-	border-radius: 75px;
-}
 #red{
-		background-color: #F08080;
-
+	background-color: #F08080;
 }
 #green {
 	background-color: #90EE90;
 }
 #go{
 	color: white;
+	position: relative;
+	height: 50px;
+	width: 200px;
+	float: left;
 }
-
 #yellow {
 	background-color: #FFFFE0;
-
 }
 #blue {
 	background-color: #ADD8E6;
-
 } 
-#result{
+#result1{
 	height: 100px;
-	width: 120px;
-	border: 2px solid white;
+	width: 150px;
 	color: white;
 }
-/*.resultDisplay{
-	border: 2px solid white;
-	display: inline-block;
+#result2{
+	height: 100px;
+	width: 150px;
+	color: white;	
+}
+#slasher{
+	float: right;
+}
+#kudos{
 	float: left;
-	height: 590px;
-}*/
-#start{
-	margin-left: 100px;
-	color: white;
-	border: 2px solid white;
-	height: 100px;
-	width: 100px;
-	text-align: center;
-	cursor:pointer;
-	background-color: red;
-	font-size: 20px;
-	
+	height: 256px;
+	width: 256px;
 }
-#gameCanvas{
-	margin: 0 10%;
+#title{
+	width: 70px;
+	position: relative;
+	left: 450px;
+	top: 220px;
+}
+#pg{
+	position: relative;
+	left: 400px;
+}
+#gO{
+	color: white;
+}
+ul{
+	color: white;
+	font-size: 30px;
+	list-style: none;
+}
+#instructions{
+	margin: 0 12%;*/
 	height: 590px;
 	width: 1050px;
 	border: 2px solid white;
-	margin-top: 20px;
-	background-image: url("../images/bg.jpg");
+	margin-top: 50px;
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-color: #888B81;
+	border-radius: 20px;
+	color: black;
+	font-size: 20px;
+}
+#gameCanvas{
+	margin: 0 12%;*/
+	height: 590px;
+	width: 1050px;
+	border: 2px solid white;
+	margin-top: 50px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #888B81;
+	border-radius: 20px;
+}
+#gameOver{
+	margin: 0 12%;*/
+	height: 590px;
+	width: 1050px;
+	border: 2px solid white;
+	margin-top: 50px;
+	background-color: #888B81;
+	border-radius: 20px;
 }
 #cont{
-	margin-top: 150px;
+	margin-top: 290px;
 }
 .displayResult{
-	margin-top: 30px;
+	font-size: 20px;
+}
+#endResult{
+	color: white;
+	font-size: 20px;
+}
+#bsSlasher{
+	height: 150px;
+	width: 150px;
+}
+#bsKudos{
+	height: 150px;
+	width: 150px;
 }

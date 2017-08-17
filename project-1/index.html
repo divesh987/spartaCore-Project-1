@@ -8,41 +8,69 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>	
+	<div id="instructions">
+		<h1><img src="images/kudos.png" id="bsKudos">Back Story<img src="images/slasher.jpg" id="bsSlasher">
+		</h1>
+		<p>Kudos is a god of lightning who one day inherited the evil traits of human beings such as arrogance and evil pleasure. He set out on destroying villages simply for pleasure. One day he destroyed a village called Kinde, which was a village predominantly filled with ninjas. In this village, there lived a 12 year old ninja called Slasher who was recieving training by his parents. He is unaware of the fact that he is actually a demi-god. A wise elder once told him that he will inherit the sword of mythery, which is a sword with the power to kill gods. When Kudos attacked the village, Slasher's parents were killed. Slasher survived the destruction and went on to venture the world and train to become adept with his skills. 12 years later, at the age of 24, Slasher finally arrives at Kudos's alter to avenge his parents' death. This is their battle!</p>
+
+		<h1>Instructions</h1>
+		<p>Each Player will have a sequence to repeat. If repeated successfully it will move on to the other player's turn, upon submitting the sequence. If the player submits an incorrect sequence, the game will end with the other player winning. The length of the sequence will increase each round. Kudos, the first player will have to repeat a sequence of colours lighting up on the screen wheras Slasher, the second player will have to repeat a sequence of arrow keys using the keyboard. Tap Space To submit each sequence.</p>
+
+	</div>
+
 	<div id="gameCanvas">
-		<h1>Memory Test Game</h1>
-		<!-- circles creation -->
+		<h1 id="start">Tap Space to Start Game!</h1>
+		<h1 id="title">Kudos VS Slasher</h1>
+		<img src="images/kudos.png" id="kudos">
+		<img src="images/slasher2.gif" id="slasher">
+
+		<!-- circles and arrows -->
 		<h3 id="go"></h3>
 		<div class="container" id="cont">
 			<div class="row">
 				<div class="col-md-3">
 					<div class="circle" id="red"></div>
+					<img id="up" src="images/uparrow.png" />
 				</div>
 				<div class="col-md-3">
 					<div class="circle" id="green"></div>
+					<img id="down" src="images/downarrow.png">
 				</div>
 				<div class="col-md-3">
 					<div class="circle" id="yellow"></div>
+					<img id="left" src="images/leftarrow.png">
 				</div>
 				<div class="col-md-3">
 					<div class="circle" id="blue"></div>
+					<img id="right" src="images/rightarrow.png">
 				</div>
 			</div>
 		</div>
-		<div class="container" >
-			<div class="row">
-				<div class="displayResult">
-					<div class="col-md-6">
-						<button id="start">
-							<br>Start
-						</button>
-					</div>
-					<div class="col-md-6">
-						<div id="result">Score: <span id="score"></span></div>
-						<button id="pg">Play Again</button>
-					</div>
+
+		<!-- scores display -->
+		<div class="row">
+			<div class="displayResult">
+				<div class="col-md-6">
+					<div id="result1">Kudos Score: <span id="score1"></span></div>
+				</div>
+				<div class="col-md-6">
+					<div id="result2">Slasher Score: <span id="score2"></span></div>
+
 				</div>
 			</div>
 		</div>
-	<!-- 	<div class="resultDisplay"></div> -->
+	</div>
+
+	<div id="gameOver">
+		<h1 id="gO"></h1>
+		<ul>
+			<li id="winner"></li>
+			<li id="loser"></li>
+		</ul>
+
+		<p id="endResult"></p>
+		<button id="pg">Play Again</button>
+	</div>
+
 </body>
 </html>

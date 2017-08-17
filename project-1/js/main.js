@@ -1,6 +1,6 @@
 $(function(event){
-	$go=$("#go");
 	//find circle
+	$go=$("#go");
 	var $circle = $(".circle");
 	var $red =$("#red");
 	var $green = $("#green");
@@ -36,6 +36,7 @@ $(function(event){
 	var turn = 0;
 	var $start=$("#start");
 	var num;
+	
 	//putting all found colours into array to set circles up
 	var $colours = [$red,$green,$yellow,$blue]
 	// console.log($colours[0]);

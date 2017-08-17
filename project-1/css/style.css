@@ -24,6 +24,7 @@ h1{
 	display: inline-block;
 
 }
+
 .lives {
 	height: 30px;
 	width: 30px;
@@ -33,6 +34,7 @@ h1{
 	width: 30px;
 	float: right;
 }
+
 .light {
 	height: 75px;
 	width: 75px;

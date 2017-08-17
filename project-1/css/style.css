@@ -13,6 +13,7 @@ h1{
 	position: relative;
 	right: 160px;
 }
+
 /*styling circles*/
 
 .circle{
@@ -22,28 +23,10 @@ h1{
 	border-radius: 120px;
 	cursor:pointer;
 	display: inline-block;
-
 }
 
-.lives {
-	height: 30px;
-	width: 30px;
-}
-.lives1{
-	height: 30px;
-	width: 30px;
-	float: right;
-}
-
-.light {
-	height: 75px;
-	width: 75px;
-	background-color:#A0A0A0;
-	border-radius: 75px;
-}
 #red{
-		background-color: #F08080;
-
+	background-color: #F08080;
 }
 #green {
 	background-color: #90EE90;
@@ -51,19 +34,15 @@ h1{
 #go{
 	color: white;
 	position: relative;
-	
 	height: 50px;
 	width: 200px;
 	float: left;
 }
-
 #yellow {
 	background-color: #FFFFE0;
-
 }
 #blue {
 	background-color: #ADD8E6;
-
 } 
 #result1{
 	height: 100px;
@@ -88,13 +67,11 @@ h1{
 	position: relative;
 	left: 450px;
 	top: 220px;
-	
 }
 #pg{
 	position: relative;
 	left: 400px;
 }
-
 #gO{
 	color: white;
 }
@@ -104,12 +81,11 @@ ul{
 	list-style: none;
 }
 #instructions{
-		margin: 0 12%;*/
+	margin: 0 12%;*/
 	height: 590px;
 	width: 1050px;
 	border: 2px solid white;
 	margin-top: 50px;
-/*	background-image: url("../images/bg.jpg");*/
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-color: #888B81;
@@ -123,22 +99,19 @@ ul{
 	width: 1050px;
 	border: 2px solid white;
 	margin-top: 50px;
-/*	background-image: url("../images/bg.jpg");*/
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-color: #888B81;
 	border-radius: 20px;
 }
 #gameOver{
-		margin: 0 12%;*/
+	margin: 0 12%;*/
 	height: 590px;
 	width: 1050px;
 	border: 2px solid white;
 	margin-top: 50px;
-/*	background-image: url("../images/bg.jpg");*/
 	background-color: #888B81;
 	border-radius: 20px;
-	/*display: none;*/
 }
 #cont{
 	margin-top: 290px;
@@ -149,4 +122,12 @@ ul{
 #endResult{
 	color: white;
 	font-size: 20px;
+}
+#bsSlasher{
+	height: 150px;
+	width: 150px;
+}
+#bsKudos{
+	height: 150px;
+	width: 150px;
 }

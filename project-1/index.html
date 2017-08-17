@@ -9,7 +9,8 @@
 </head>
 <body>	
 	<div id="instructions">
-		<h1>Back Story</h1>
+		<h1><img src="images/kudos.png" id="bsKudos">Back Story<img src="images/slasher.jpg" id="bsSlasher">
+		</h1>
 		<p>Kudos is a god of lightning who one day inherited the evil traits of human beings such as arrogance and evil pleasure. He set out on destroying villages simply for pleasure. One day he destroyed a village called Kinde, which was a village predominantly filled with ninjas. In this village, there lived a 12 year old ninja called Slasher who was recieving training by his parents. He is unaware of the fact that he is actually a demi-god. A wise elder once told him that he will inherit the sword of mythery, which is a sword with the power to kill gods. When Kudos attacked the village, Slasher's parents were killed. Slasher survived the destruction and went on to venture the world and train to become adept with his skills. 12 years later, at the age of 24, Slasher finally arrives at Kudos's alter to avenge his parents' death. This is their battle!</p>
 
 		<h1>Instructions</h1>
@@ -18,24 +19,12 @@
 	</div>
 
 	<div id="gameCanvas">
-		<h1>Tap Space to Start Game!</h1>
-	<!-- 	<h4 id="kudoslife">Kudos:</h4>
-		<img class="lives" src="images/lives.png">
-		<img class="lives" src="images/lives.png">
-		<img class="lives" src="images/lives.png">
-
-		<h4 id="slasherlife">Slasher:</h4>
-		<img class="lives1" src="images/lives.png">
-		<img class="lives1" src="images/lives.png">
-		<img class="lives1" src="images/lives.png"> -->
-
+		<h1 id="start">Tap Space to Start Game!</h1>
 		<h1 id="title">Kudos VS Slasher</h1>
 		<img src="images/kudos.png" id="kudos">
-
 		<img src="images/slasher2.gif" id="slasher">
 
-
-		<!-- circles creation -->
+		<!-- circles and arrows -->
 		<h3 id="go"></h3>
 		<div class="container" id="cont">
 			<div class="row">
@@ -58,11 +47,7 @@
 			</div>
 		</div>
 
-    		
-    		
-    		
-    		
-
+		<!-- scores display -->
 		<div class="row">
 			<div class="displayResult">
 				<div class="col-md-6">
@@ -72,24 +57,20 @@
 					<div id="result2">Slasher Score: <span id="score2"></span></div>
 
 				</div>
-					<!-- <button id="pg">Play Again</button> -->
 			</div>
 		</div>
 	</div>
+
 	<div id="gameOver">
 		<h1 id="gO"></h1>
 		<ul>
-			<li id="winner">
-				
-			</li>
-			<li id="loser">
-				
-			</li>
+			<li id="winner"></li>
+			<li id="loser"></li>
 		</ul>
 
 		<p id="endResult"></p>
 		<button id="pg">Play Again</button>
 	</div>
-	<!-- 	<div class="resultDisplay"></div> -->
+
 </body>
 </html>

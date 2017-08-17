@@ -12,7 +12,7 @@ Game Link: [Kudos Vs Slasher](https://divesh987.github.io/spartaCore-Project-1/p
 2. Game
 	* How to run the software
 	* Rules
-	* Screenshots of game
+	* Game Screenshots
 
 # Development
 
@@ -40,13 +40,13 @@ The technologies used for the creation of my game are HTML, CSS, Bootstrap, Java
 ![Wireframe 1](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame1.png " ")
 
 ### Wireframe 2 - Player 1's Turn
-![Wireframe 2](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame2.png " ")
+![Wireframe 2](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/Wireframe2.png " ")
 
 ### WireFrame 3 - Player 2's Turn 
-![Wireframe 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame3.png " ")
+![Wireframe 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/Wireframe3.png " ")
 
 ### WireFrame 4 - Game Over Screen
-![Wireframe 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/WireFrame4.png " ")
+![Wireframe 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/wireframes/Wireframe4.png " ")
 
 ## How I approached the task
 For the task given, I decided to first decide upon the game that I am going to develop. This process involved browsing the internet to look at other games for inspiration and ideas. Upon coming up with my idea I started to plan out how I am going to implement it. I had to design the wireframes for all the different displays that could possibly show up on the game screen. 
@@ -71,7 +71,18 @@ I am pleased with the fact that my programming skills are getting better and tha
 
 # Game
 ## How to run the software
+The game was created on a webpage so it can be run on web browsers such as Google Chrome, Internet Explorer, etc. The game was not intended for mobile because of controls such as arrow keys. The game is best run on desktop and laptop computers.
 
+## Rules
+* Game starts with player 1's turn.
+* Player 1 will be shown a sequence of colours lighting up
+* Player 2 wil be shown a sequence of arrow keys pressing
+* Each player must repeat the sequence shown correctly.
+* If the player repeats the sequence incorrectly, they will lose to the other player.
 
-
-	 
+## Game Screenshots
+![Screenshot 1](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
+![Screenshot 2](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
+![Screenshot 3](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
+![Screenshot 4](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")
+![Screenshot 5](https://github.com/divesh987/spartaCore-Project-1/blob/develop/project-1/Sprints.png " ")

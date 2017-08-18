@@ -72,6 +72,7 @@ $(function(event){
   					$up.css("opacity","0.4");
   					$up.css("filter","alpha(opacity=40)");
   					sq.push("up");
+  					console.log("up");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -88,6 +89,7 @@ $(function(event){
   					$down.css("opacity","0.4");
   					$down.css("filter","alpha(opacity=40)");
   					sq.push("down");
+  					console.log("down");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -104,6 +106,7 @@ $(function(event){
   					$left.css("opacity","0.4");
   					$left.css("filter","alpha(opacity=40)");
   					sq.push("left");
+  					console.log("left");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -120,6 +123,7 @@ $(function(event){
   					$right.css("opacity","0.4");
   					$right.css("filter","alpha(opacity=40)");
   					sq.push("right");
+  					console.log("right");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -197,6 +201,7 @@ $(function(event){
 			setTimeout(function(){
 				buttonclickable(sequenceP1)
 			},p1end*1000);
+			console.log('current turn ------ 1');
 			turn++;
 
 		} else {
@@ -220,7 +225,9 @@ $(function(event){
 	//set up circles function 
 	function setUpCircles(x,colour,audio,playerSequence){
 
+		console.log('setting up circles function')
 		$(x.on("click",function(){
+			console.log("ive been clicked");
 			x.css("background-color",colour)
 			audio.play();
 
@@ -357,6 +364,7 @@ $(function(event){
 
 		if(turn % 2 === 0){
 			for(var i =0; i<sequenceP1.length;i++){
+				console.log('Whos Turn - Should be 2 which is player 1',turn);
 				if(sequenceP1[i] === requiredSequenceP1[i]){
 
 					score1++;
@@ -366,8 +374,8 @@ $(function(event){
 
 						$("#gameCanvas").css("display","none");
 						$("#gO").html("GAME OVER!!!")
-						$("#winner").html("Slasher------------------------------------" + score2 + " sequences repateated correctly");
-						$("#loser").html("Kudos---------------------------------------" + score1 + " sequences repateated correctly");
+						$("#winner").html("Slasher------------------------------------" + score2);
+						$("#loser").html("Kudos---------------------------------------" + score1);
 						$("#endResult").html("Player 2 Wins!!! \n Slasher kills Kudos. He avenges his parents. Will he ever find out he is a demi-god?");
 						turnOffButtons();
 						clearInterval(keepComp);
@@ -382,6 +390,7 @@ $(function(event){
 		} else {
 
 			for(var i = 0; i < sequenceP2.length; i++){
+				console.log('Whos Turn - Should be 3 which player 2',turn);
 
 					if(sequenceP2[i] === requiredSequenceP2[i]){
 
@@ -393,8 +402,8 @@ $(function(event){
 						$("#gO").html("GAME OVER!!!")
 						$("#gameCanvas").css("display","none");
 						// $("#gameOver").css("display",);
-						$("#winner").html("Kudos------------------------------------" + score1 + " sequences repateated correctly");
-						$("#loser").html("Slasher-----------------------------------" + score2 + " sequences repateated correctly");
+						$("#winner").html("Kudos------------------------------------" + score1);
+						$("#loser").html("Slasher-----------------------------------" + score2);
 						$("#endResult").html("Player 1 wins!!! \n Slasher failed to avenge his parents. Kudos kills Slasher and his tyranny continues...")
 						turnOffButtons();
 						$start.off("click");

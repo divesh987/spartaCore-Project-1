@@ -29,6 +29,8 @@ $(function(event){
 	var audioC = new Audio('audio/pianoC.mp3');
 	var audioD = new Audio('audio/pianoD.mp3');
 	var audios=[audioA,audioB,audioC,audioD];
+	var s =0;
+	var t =0;
 
 	//variable to switch between turns of both players
 	var turn = 0;
@@ -50,6 +52,36 @@ $(function(event){
 	var $arrows=[$up,$down,$left,$right];
 	//array for pushing values in both the player sequence and required sequence for player 2
 	var arrows =["up","down","left","right"]
+
+	var $cp = $("#cp");
+	var $cp2 = $("#cp2");
+
+	$cp.on("click",function(){
+
+		if (s % 2 ==0){
+			$("#kudos").attr("src","images/narutofighting.gif-c200");
+			
+			s++;
+		} else 
+		{
+			$("#kudos").attr("src","images/kudos.png");
+			s++
+		}
+
+	})
+	$cp2.on("click",function(){
+		if (t % 2 ==0){
+			$("#slasher").attr("src","images/sasukefighting.gif");
+			
+			t++;
+		} else 
+		{
+			$("#slasher").attr("src","images/slasher2.gif");
+			t++
+		}
+
+	})
+
 
 	//function to loop through all the found arrow keys on the screen
 	function keyspressable(sq){

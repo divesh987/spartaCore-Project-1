@@ -29,6 +29,8 @@ $(function(event){
 	var audioC = new Audio('audio/pianoC.mp3');
 	var audioD = new Audio('audio/pianoD.mp3');
 	var audios=[audioA,audioB,audioC,audioD];
+	var s =0;
+	var t =0;
 
 	//variable to switch between turns of both players
 	var turn = 0;
@@ -51,6 +53,36 @@ $(function(event){
 	//array for pushing values in both the player sequence and required sequence for player 2
 	var arrows =["up","down","left","right"]
 
+	var $cp = $("#cp");
+	var $cp2 = $("#cp2");
+
+	$cp.on("click",function(){
+
+		if (s % 2 ==0){
+			$("#kudos").attr("src","images/narutofighting.gif-c200");
+			
+			s++;
+		} else 
+		{
+			$("#kudos").attr("src","images/kudos.png");
+			s++
+		}
+
+	})
+	$cp2.on("click",function(){
+		if (t % 2 ==0){
+			$("#slasher").attr("src","images/sasukefighting.gif");
+			
+			t++;
+		} else 
+		{
+			$("#slasher").attr("src","images/slasher2.gif");
+			t++
+		}
+
+	})
+
+
 	//function to loop through all the found arrow keys on the screen
 	function keyspressable(sq){
 		for(var i=0;i<$arrows.length;i++){
@@ -72,7 +104,6 @@ $(function(event){
   					$up.css("opacity","0.4");
   					$up.css("filter","alpha(opacity=40)");
   					sq.push("up");
-  					console.log("up");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -89,7 +120,6 @@ $(function(event){
   					$down.css("opacity","0.4");
   					$down.css("filter","alpha(opacity=40)");
   					sq.push("down");
-  					console.log("down");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -106,7 +136,6 @@ $(function(event){
   					$left.css("opacity","0.4");
   					$left.css("filter","alpha(opacity=40)");
   					sq.push("left");
-  					console.log("left");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -123,7 +152,6 @@ $(function(event){
   					$right.css("opacity","0.4");
   					$right.css("filter","alpha(opacity=40)");
   					sq.push("right");
-  					console.log("right");
   					audio.play();
   					setTimeout(function(){
   						resetKey(keys);
@@ -201,7 +229,6 @@ $(function(event){
 			setTimeout(function(){
 				buttonclickable(sequenceP1)
 			},p1end*1000);
-			console.log('current turn ------ 1');
 			turn++;
 
 		} else {
@@ -225,9 +252,7 @@ $(function(event){
 	//set up circles function 
 	function setUpCircles(x,colour,audio,playerSequence){
 
-		console.log('setting up circles function')
 		$(x.on("click",function(){
-			console.log("ive been clicked");
 			x.css("background-color",colour)
 			audio.play();
 
@@ -364,7 +389,6 @@ $(function(event){
 
 		if(turn % 2 === 0){
 			for(var i =0; i<sequenceP1.length;i++){
-				console.log('Whos Turn - Should be 2 which is player 1',turn);
 				if(sequenceP1[i] === requiredSequenceP1[i]){
 
 					score1++;
@@ -390,7 +414,6 @@ $(function(event){
 		} else {
 
 			for(var i = 0; i < sequenceP2.length; i++){
-				console.log('Whos Turn - Should be 3 which player 2',turn);
 
 					if(sequenceP2[i] === requiredSequenceP2[i]){
 

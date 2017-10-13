@@ -56,6 +56,8 @@ h1{
 }
 #slasher{
 	float: right;
+	height: 256px;
+	width: 256px;
 }
 #kudos{
 	float: left;
@@ -130,4 +132,39 @@ ul{
 #bsKudos{
 	height: 150px;
 	width: 150px;
+}
+#selection {
+margin: 0 12%;*/
+	height: 590px;
+	width: 1050px;
+	border: 2px solid white;
+	margin-top: 50px;
+	background-color: #888B81;
+	border-radius: 20px;
+}
+#char1{
+	background-image: url("../images/gokuchar.png");
+	background-repeat: no-repeat;
+
+}
+#char2{
+	background-image: url("../images/sasukechar.png");
+	background-repeat: no-repeat;
+
+}
+#char3 {
+	background-image: url("../images/narutochar.png");
+	background-repeat: no-repeat;
+}
+.char {
+	height: 200px;
+	width: 300px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+.char span {
+	background-color: black;
 }
